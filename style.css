@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'poppins', sans-serif;
+}
+button{
+    font-family: 'poppins', sans-serif;
+}
+header {
+    display: flex;
+    width: 80%;
+    height: 10vh;
+    margin: auto;
+    align-items: center;
+}
+
+.brand-logo,
+.nav-links{
+    display: flex;
+}
+
+.brand-logo{  
+    flex: 1;
+}
+
+.logo{
+    padding-left: 10px;
+}
+
+nav{
+
+ flex: 2;
+}
+
+.nav-links, a {
+    justify-content: space-around;
+    text-decoration: none;
+    list-style: none;
+}
+
+.nav-link{
+    font-weight: 500;
+}
+.nav-link:hover{
+    background: #fafafa;
+}
+
+
+.presentation{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    min-height: 80vh;
+    align-items: center;
+}
+
+.introduction{
+    flex: 1;
+}
+
+.intro-text h1{
+    font-size: 44px;
+    font-weight: 500px;
+    background: linear-gradient(to right, #494964, #6f6f69);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.intro-text p{
+    margin: 5px 0;
+    font-size: 22px;
+    color: #585772;
+}
+
+.cta{
+    padding: 50px 0px;
+}
+
+.cta-select{
+    width: 150px;
+    height: 50px;
+    border: 2px solid #c36cbb;
+    background: transparent;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.cta-add{
+    background: #c36cbb;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    margin-left: 30px;
+}
+
+.cover {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    height: 40vh;
+}
+
+.cover img{
+    height: 110%;
+    filter: drop-shadow(0px 20px 3px black);
+    animation: drop 1.5s ease;
+}
+
+.big-circle{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    height: 80%;
+    opacity: 0.5;
+}
+
+.mid-circle{
+    position: absolute;
+    top: 30%;
+    right: 30%;
+    z-index: -1;
+    height: 60%;
+    opacity: 0.3;
+}
+
+.small-circle{
+    position: absolute;
+    bottom: 0%;
+    left: 20%;
+    z-index: -1;  
+}
+.laptop-select{
+    width: 15%;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    right: 20%;
+}
+
+@keyframes drop{
+    0% {
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .presentation{
+        flex-direction: column;        
+    }
+    .introduction{
+        margin-top: 5vh;
+        text-align: center;
+    }
+    .intro-text h1{
+        font-size: 30px;
+    }
+    .intro-text p{
+        font-size: 18px;
+    }
+    .cta{
+        padding: 10px 0px 0px 0px;
+    }
+    .cover img{
+        height: 80%
+    }
+
+    .big-circle,
+    .mid-circle,
+    .small-circle{
+        opacity: 0.2;
+    }
+} 
